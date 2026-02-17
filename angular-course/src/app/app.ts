@@ -11,5 +11,12 @@ export class App {
   data = {
     appTitle: 'angular-course'
   }
+
+  onLogoClicked() {
+    alert("Hello World");
+  }
   
+  onKeyUp(newTitle:string){
+    this.data.appTitle = newTitle;
+  }
 }
