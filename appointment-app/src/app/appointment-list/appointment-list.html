@@ -2,5 +2,21 @@
 <div>
     <input [(ngModel)] = "newAppointmentTitle" placeholder = "Appointment Description">
     <input [(ngModel)] = "newAppointmentDate" type="date" placeholder="Appointment Date">
-    <button>Add to List</button>
+    <button (click)="addAppointment()">Add to List</button>
 </div>
+
+<ul>
+    <li *ngFor="let app of appointments; index as i">
+        <div>
+            {{ app.id}}
+        </div> 
+        <div>
+            {{app.title}} 
+        </div>
+        <div>
+            {{app.date}}
+        </div>
+        <button (click)="deleteAppointment(i)">Delete</button>
+
+    </li>
+</ul>
